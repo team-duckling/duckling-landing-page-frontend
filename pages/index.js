@@ -1,5 +1,5 @@
-import NormalButton from "./components/NormalButton";
-import TextInput from "./components/TextInput";
+import NormalButton from "../src/components/NormalButton";
+import TextInput from "../src/components/TextInput";
 
 export default function Home() {
   return (
