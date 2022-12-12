@@ -1,3 +1,11 @@
+import NormalButton from "./components/NormalButton";
+
 export default function Home() {
-  return <div>Homepage</div>;
+  return (
+    <div>
+      <h1>Homepage</h1>
+
+      <NormalButton buttonName="Click me" />
+    </div>
+  );
 }
