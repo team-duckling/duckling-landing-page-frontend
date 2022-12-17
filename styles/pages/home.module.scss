@@ -1,0 +1,55 @@
+.homepage {
+  margin: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .mainGoal {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    max-width: 1000px;
+
+    .title {
+      margin-bottom: 24px;
+      display: block;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 24px;
+      --text-opacity: 1;
+      color: #9b9b9b;
+    }
+
+    .subTitle {
+      margin-top: 24px;
+      font-size: 48px;
+      font-weight: 600;
+    }
+
+    .detailInfo {
+      margin-top: 48px;
+      font-weight: 400;
+      font-size: 24px;
+    }
+
+    .customizedBtn {
+      margin-top: 48px;
+
+      .nextui-button-text {
+        padding: 0 32px;
+      }
+    }
+
+    .imageContainer {
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+
+      .imageItem {
+        + .imageItem {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

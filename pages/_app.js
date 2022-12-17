@@ -1,11 +1,11 @@
 import "../styles/globals.scss";
 import { SSRProvider } from "@react-aria/ssr";
-import HeaderNavbar from "../src/components/HeaderNavbar";
+import Header from "../src/components/Navbar";
 
 function MyApp({ Component, pageProps }) {
   return (
     <SSRProvider>
-      <HeaderNavbar />
+      <Header />
       <Component {...pageProps} />
     </SSRProvider>
   );

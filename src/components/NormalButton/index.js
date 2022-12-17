@@ -1,6 +1,5 @@
 import { Button, Loading } from "@nextui-org/react";
 import PropTypes from "prop-types";
-// import "./styles.scss";
 
 const NormalButton = (props) => {
   return (
@@ -16,6 +15,8 @@ const NormalButton = (props) => {
       light={props.light}
       icon={props.icon}
       iconRight={props.iconRight}
+      className={props.className}
+      css={props.css}
     >
       {props.isLoading ? (
         <Loading color="currentColor" size="sm" type={props.loadingType} />
@@ -41,6 +42,8 @@ NormalButton.propTypes = {
   iconRight: PropTypes.element,
   isLoading: PropTypes.bool,
   loadingType: PropTypes.string,
+  className: PropTypes.string,
+  css: PropTypes.any,
 };
 
 NormalButton.defaultProps = {
@@ -58,6 +61,8 @@ NormalButton.defaultProps = {
   iconRight: undefined,
   isLoading: false,
   loadingType: "spinner",
+  className: "",
+  css: undefined,
 };
 
 export default NormalButton;
