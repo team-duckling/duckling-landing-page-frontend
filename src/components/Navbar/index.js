@@ -1,7 +1,15 @@
+import React, { useState } from "react";
 import styles from "../../../styles/components/navbar.module.scss"; // importing the css file
 import Link from "next/link";
+import classNames from "classnames";
 
 export default function Navbar({ current }) {
+  const [isSlideBarOpen, setIsSlideBarOpen] = useState(false);
+
+  const onToggleSlideBar = () => {
+    setIsSlideBarOpen(!isSlideBarOpen);
+  };
+
   return (
     <div className={styles.navigationBar}>
       <div className={styles.container}>
@@ -39,6 +47,20 @@ export default function Navbar({ current }) {
             )}{" "}
           </li>
         </ul>
+
+        <button
+          className={classNames(
+            "hamburber hamburger--collapse",
+            styles.hamburgerMenu,
+            isSlideBarOpen ? "is-active" : ""
+          )}
+          type="button"
+          onClick={onToggleSlideBar}
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
     </div>
   );
