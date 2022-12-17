@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "../styles/pages/home.module.scss";
 import NormalButton from "../src/components/NormalButton";
 import ImageComponent from "../src/components/ImageComponent";
-// import { CameraIcon } from "../src/components/Icons/CameraIcon";
+import classNames from "classnames";
 
 export default function Home() {
   useEffect(() => {
@@ -34,12 +34,12 @@ export default function Home() {
           css={{ padding: "12px" }}
         />
 
-        <div className={styles.imageContainer}>
-          <ImageComponent className={styles.imageItem} />
+        <div className={classNames(styles.imageContainer)}>
+          <ImageComponent className={styles.imageItem} width="300" />
 
-          <ImageComponent className={styles.imageItem} />
+          <ImageComponent className={styles.imageItem} width="300" />
 
-          <ImageComponent className={styles.imageItem} />
+          <ImageComponent className={styles.imageItem} width="300" />
         </div>
       </div>
 
@@ -67,14 +67,18 @@ export default function Home() {
           </p>
         </div>
 
-        <div className={styles.imageContainer}>
-          <ImageComponent className={styles.imageItem} />
+        <div className={classNames(styles.imageContainer)}>
+          <ImageComponent className={styles.imageItem} width="300" />
 
-          <ImageComponent className={styles.imageItem} />
+          <ImageComponent className={styles.imageItem} width="300" />
 
-          <ImageComponent className={styles.imageItem} />
+          <ImageComponent className={styles.imageItem} width="300" />
 
-          <ImageComponent className={styles.imageItem} />
+          <ImageComponent className={styles.imageItem} width="300" />
+
+          <ImageComponent className={styles.imageItem} width="300" />
+
+          <ImageComponent className={styles.imageItem} width="300" />
         </div>
 
         <NormalButton
@@ -83,7 +87,6 @@ export default function Home() {
           color="primary"
           auto
           light
-          // iconRight={<CameraIcon fill="currentColor" />}
           css={{ padding: "12px" }}
         />
       </div>

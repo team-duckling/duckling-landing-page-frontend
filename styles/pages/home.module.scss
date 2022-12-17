@@ -8,7 +8,7 @@
   .mainGoal {
     margin-top: 48px;
     margin-bottom: 48px;
-    max-width: 1000px;
+    width: 100%;
 
     .title {
       margin-bottom: 24px;
@@ -42,14 +42,52 @@
 
     .imageContainer {
       margin-top: 48px;
-      display: flex;
-      align-items: center;
 
-      .imageItem {
-        + .imageItem {
-          margin-left: 20px;
-        }
-      }
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: repeat(auto-fit, 300px);
+      grid-template-rows: repeat(2, 200px);
+    }
+  }
+}
+
+/*Smart phone nhỏ*/
+@media screen and (min-width: 240px) {
+  .homepage {
+    .mainGoal {
+      max-width: 240px;
+    }
+  }
+}
+/*Iphone(480 x 640)*/
+@media screen and (min-width: 320px) {
+  .homepage {
+    .mainGoal {
+      max-width: 320px;
+    }
+  }
+}
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (min-width: 480px) {
+  .homepage {
+    .mainGoal {
+      max-width: 480px;
+    }
+  }
+}
+/*Ipad dọc(768 x 1024)*/
+@media screen and (min-width: 768px) {
+  .homepage {
+    .mainGoal {
+      max-width: 768px;
+    }
+  }
+}
+/*Ipad ngang(1024 x 768)*/
+@media screen and (min-width: 1024px) {
+  .homepage {
+    .mainGoal {
+      max-width: 1024px;
     }
   }
 }
