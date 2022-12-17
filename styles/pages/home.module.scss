@@ -1,0 +1,34 @@
+.homepage {
+  margin: 48px 48px 0 48px;
+  max-width: 70vw;
+  display: flex;
+  justify-content: center;
+
+  .mainGoal {
+    .title {
+      margin-bottom: 1rem;
+      display: block;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 24px;
+      --text-opacity: 1;
+      color: #9b9b9b;
+    }
+
+    .subTitle {
+      margin-top: 1rem;
+      font-size: 48px;
+      font-weight: 600;
+    }
+
+    .detailInfo {
+      margin-top: 2rem;
+      font-weight: 400;
+      font-size: 24px;
+    }
+
+    .customizedBtn {
+      margin-top: 2rem;
+    }
+  }
+}

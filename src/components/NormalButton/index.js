@@ -1,6 +1,5 @@
 import { Button, Loading } from "@nextui-org/react";
 import PropTypes from "prop-types";
-// import "./styles.scss";
 
 const NormalButton = (props) => {
   return (
@@ -16,6 +15,7 @@ const NormalButton = (props) => {
       light={props.light}
       icon={props.icon}
       iconRight={props.iconRight}
+      className={props.className}
     >
       {props.isLoading ? (
         <Loading color="currentColor" size="sm" type={props.loadingType} />
