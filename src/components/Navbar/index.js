@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef, useImperativeHandle } from "react";
 import styles from "../../../styles/components/navbar.module.scss"; // importing the css file
 import Link from "next/link";
 import classNames from "classnames";
 
-export default function Navbar({ current }) {
-  const [isSlideBarOpen, setIsSlideBarOpen] = useState(false);
+const Navbar = (props, ref, current) => {
+  const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+
+  useImperativeHandle(ref, () => ({ isSideBarOpen }));
 
   const onToggleSlideBar = () => {
-    setIsSlideBarOpen(!isSlideBarOpen);
+    setIsSideBarOpen(!isSideBarOpen);
   };
 
   return (
@@ -52,10 +54,11 @@ export default function Navbar({ current }) {
           className={classNames(
             "hamburber hamburger--collapse",
             styles.hamburgerMenu,
-            isSlideBarOpen ? "is-active" : ""
+            isSideBarOpen ? "is-active" : ""
           )}
           type="button"
           onClick={onToggleSlideBar}
+          ref={ref}
         >
           <span className="hamburger-box">
             <span className="hamburger-inner"></span>
@@ -64,4 +67,6 @@ export default function Navbar({ current }) {
       </div>
     </div>
   );
-}
+};
+
+export default forwardRef(Navbar);
