@@ -1,12 +1,10 @@
-import React, { useState, forwardRef, useImperativeHandle } from "react";
+import React, { useState } from "react";
 import styles from "../../../styles/components/navbar.module.scss"; // importing the css file
 import Link from "next/link";
 import classNames from "classnames";
 
-const Navbar = (props, ref, current) => {
+const Navbar = (current) => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-
-  useImperativeHandle(ref, () => ({ isSideBarOpen }));
 
   const onToggleSlideBar = () => {
     setIsSideBarOpen(!isSideBarOpen);
@@ -58,7 +56,6 @@ const Navbar = (props, ref, current) => {
           )}
           type="button"
           onClick={onToggleSlideBar}
-          ref={ref}
         >
           <span className="hamburger-box">
             <span className="hamburger-inner"></span>
@@ -69,4 +66,4 @@ const Navbar = (props, ref, current) => {
   );
 };
 
-export default forwardRef(Navbar);
+export default Navbar;
