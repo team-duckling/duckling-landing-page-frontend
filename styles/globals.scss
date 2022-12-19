@@ -1,1 +1,15 @@
 @import "reset-css";
+@import "../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+.page-container {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    &.has-sidebar {
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+}

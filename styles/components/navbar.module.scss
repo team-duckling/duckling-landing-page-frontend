@@ -9,6 +9,7 @@
   padding: 24px 48px;
   background-color: #f5f5f5;
   border-bottom: 1px solid #ccc;
+  height: 40px;
 
   .container {
     display: flex;
@@ -24,7 +25,7 @@
     }
 
     .menuList {
-      display: flex;
+      display: none;
       list-style-type: none;
 
       .menuItem {
@@ -40,6 +41,14 @@
           }
         }
       }
+    }
+
+    .hamburgerMenu {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+      color: #333;
+      background-color: transparent;
     }
   }
 }
@@ -73,6 +82,14 @@
   .navigationBar {
     .container {
       max-width: 768px;
+
+      .menuList {
+        display: flex;
+      }
+
+      .hamburgerMenu {
+        display: none;
+      }
     }
   }
 }
