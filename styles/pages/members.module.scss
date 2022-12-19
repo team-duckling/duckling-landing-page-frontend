@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
 
-  height: 100%;
+  min-height: calc(100vh - 60px - 24px - 5px);
 
   .customizeMemberCard {
     margin-top: 24px;
