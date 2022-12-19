@@ -21,10 +21,19 @@ const Navbar = (props) => {
     });
   };
 
+  const handleRouteClick = () => {
+    props.dispatch({
+      type: "TOGGLE_SIDEBAR",
+      isSideBarOpen: false,
+    });
+  };
+
   return (
     <div className={styles.navigationBar}>
       <div className={styles.container}>
-        <h1 className={styles.brand}>Duckling</h1>
+        <Link href="/" className={styles.brand} onClick={handleRouteClick}>
+          Duckling
+        </Link>
 
         <ul className={styles.menuList}>
           <li className={styles.menuItem}>
@@ -35,6 +44,11 @@ const Navbar = (props) => {
           <li className={styles.menuItem}>
             <Link href="/members" className={styles.navLink}>
               Members
+            </Link>{" "}
+          </li>
+          <li className={styles.menuItem}>
+            <Link href="/projects" className={styles.navLink}>
+              Projects
             </Link>{" "}
           </li>
           <li className={styles.menuItem}>

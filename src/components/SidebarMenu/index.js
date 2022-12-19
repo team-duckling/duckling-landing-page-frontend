@@ -33,6 +33,11 @@ const Sidebar = (props) => {
           </Link>{" "}
         </li>
         <li className={styles.menuItem} onClick={handleRouteClick}>
+          <Link href="/projects" className={styles.navLink}>
+            Projects
+          </Link>{" "}
+        </li>
+        <li className={styles.menuItem} onClick={handleRouteClick}>
           <Link href="/about" className={styles.navLink}>
             About
           </Link>{" "}
