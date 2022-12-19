@@ -11,7 +11,14 @@
   top: calc(60px + 24px + 5px);
   z-index: 1000;
 
+  // animation slide from right to left
   &.isHidden {
     display: none;
+    animation: slideIn 0.5s ease-in-out;
+  }
+
+  &.isShow {
+    display: block;
+    animation: slideOut 0.5s ease-in-out;
   }
 }

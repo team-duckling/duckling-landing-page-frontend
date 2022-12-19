@@ -17,8 +17,8 @@ const ImageComponent = (props) => {
 
 ImageComponent.propTypes = {
   className: PropTypes.string,
-  width: PropTypes.number,
-  height: PropTypes.number,
+  width: PropTypes.string,
+  height: PropTypes.string,
   src: PropTypes.string,
   alt: PropTypes.string,
   objectFit: PropTypes.string,
@@ -26,8 +26,8 @@ ImageComponent.propTypes = {
 
 ImageComponent.defaultProps = {
   className: "",
-  width: 320,
-  height: 180,
+  width: "320",
+  height: "180",
   src: "https://github.com/nextui-org/nextui/blob/next/apps/docs/public/nextui-banner.jpeg?raw=true",
   alt: "Default Image",
   objectFit: "cover",

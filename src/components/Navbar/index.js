@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import styles from "../../../styles/components/navbar.module.scss"; // importing the css file
 import Link from "next/link";
 import classNames from "classnames";
+import { connect } from "react-redux";
 
-const Navbar = (current) => {
+const Navbar = (props) => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
   const onToggleSlideBar = () => {
     setIsSideBarOpen(!isSideBarOpen);
+
+    props.dispatch({
+      type: "TOGGLE_SIDEBAR",
+      isSideBarOpen: !isSideBarOpen,
+    });
   };
 
   return (
@@ -20,31 +26,16 @@ const Navbar = (current) => {
             <Link href="/" className={styles.navLink}>
               Home
             </Link>{" "}
-            {current === "home" ? (
-              <span className={styles.current}>current page</span>
-            ) : (
-              ""
-            )}{" "}
           </li>
           <li className={styles.menuItem}>
             <Link href="/members" className={styles.navLink}>
               Members
             </Link>{" "}
-            {current === "members" ? (
-              <span className={styles.current}>current page</span>
-            ) : (
-              ""
-            )}{" "}
           </li>
           <li className={styles.menuItem}>
             <Link href="/about" className={styles.navLink}>
               About
             </Link>{" "}
-            {current === "about" ? (
-              <span className={styles.current}>current page</span>
-            ) : (
-              ""
-            )}{" "}
           </li>
         </ul>
 
@@ -66,4 +57,12 @@ const Navbar = (current) => {
   );
 };
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+  initalState: state,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  dispatch,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
