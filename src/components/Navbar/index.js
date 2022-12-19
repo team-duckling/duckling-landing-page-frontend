@@ -3,6 +3,7 @@ import styles from "../../../styles/components/navbar.module.scss"; // importing
 import Link from "next/link";
 import classNames from "classnames";
 import { connect } from "react-redux";
+import { store } from "../../store";
 
 const Navbar = (props) => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
@@ -13,6 +14,10 @@ const Navbar = (props) => {
     props.dispatch({
       type: "TOGGLE_SIDEBAR",
       isSideBarOpen: !isSideBarOpen,
+    });
+
+    store.subscribe(() => {
+      setIsSideBarOpen(store.getState().isSideBarOpen);
     });
   };
 

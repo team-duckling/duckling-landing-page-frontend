@@ -8,9 +8,7 @@
 @media screen and (max-width: 768px) {
   .page-container {
     &.has-sidebar {
-      max-height: 100vh;
-
-      background-color: blue;
+      height: 100vh;
       overflow: hidden;
     }
   }
