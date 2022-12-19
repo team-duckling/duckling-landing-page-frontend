@@ -9,7 +9,35 @@ const Members = () => {
 
   return (
     <div className={styles.membersPage}>
-      <MemberCard className={styles.customizeMemberCard} />
+      <div className={styles.memberCardContainer}>
+        <MemberCard
+          className={styles.customizeMemberCard}
+          userData={{
+            name: "Tô Hoàng Phụng",
+            position: "Frontend Developer",
+            domainName: "PhungTH",
+          }}
+          isLeader
+        />
+
+        <MemberCard
+          className={styles.customizeMemberCard}
+          userData={{
+            name: "Nguyễn Trường Thành",
+            position: "Frontend Developer",
+            domainName: "ThanhNT26",
+          }}
+        />
+
+        <MemberCard
+          className={styles.customizeMemberCard}
+          userData={{
+            name: "Trần Văn Huy Hoàng",
+            position: "Frontend Developer",
+            domainName: "HoangTVH",
+          }}
+        />
+      </div>
     </div>
   );
 };

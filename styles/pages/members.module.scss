@@ -8,4 +8,9 @@
   .customizeMemberCard {
     margin-top: 24px;
   }
+
+  .memberCardContainer {
+    display: grid;
+    grid-gap: 5px;
+  }
 }
