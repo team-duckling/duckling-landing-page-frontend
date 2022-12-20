@@ -11,6 +11,11 @@
   border-bottom: 1px solid #ccc;
   height: 40px;
 
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1500;
+
   .container {
     display: flex;
     justify-content: space-between;
