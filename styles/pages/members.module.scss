@@ -12,5 +12,9 @@
   .memberCardContainer {
     display: grid;
     grid-gap: 5px;
+
+    .memberLink {
+      text-decoration: none;
+    }
   }
 }
